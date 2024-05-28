@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Spring Security Example</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Security</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active"><a th:href="@{/home}">Home</a></li>
+                    <li class="nav-item"><a th:href="@{/admin}">Masters</a></li>
+                    <li class="nav-item"><a th:href="@{/mod}">Knights</a></li>
+                    <li class="nav-item"><a th:href="@{/hello}">Users</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="bg-light p-5 rounded">
+                <h1>User Content</h1>
+                <p class="lead">This content is for any authenticated force wielders. </p>
+                <a  th:href="@{/hello}" class="btn btn-lg btn-primary" role="button">I WIELD THE FORCE! &raquo;</a>
+            </div>
+            <br>
+            <br>
+            <br>
+                <div class="bg-light p-5 rounded">
+                            <h1>Mod Content</h1>
+                            <p class="lead">This content is for KNIGHTS and MASTERS.</p>
+                            <a  th:href="@{/mod}" class="btn btn-lg btn-primary" role="button">I'm a KNIGHT/MASTER! &raquo;</a>                        
+                </div>
+                <br>
+                <br>
+                <br>                                    
+                    <div class="bg-light p-5 rounded">                                        
+                        <h1>Admin Content</h1>                                        
+                        <p class="lead">This content is for MASTERS only. </p>                                        
+                        <a  th:href="@{/admin}" class="btn btn-lg btn-primary" role="button">I'm a MASTER! &raquo;</a>                                    
+                    </div>                                    
+        </main>                                   
+    </body>                                    
+</html>
